@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@Muhsul cal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="nav-bar">
+    <ul>
+        <li><a href="calculator.html" class="active">calculator</a></li>
+        <li><a href="counter.html">counter</a></li>
+        <li><a href="KiloToMeters.html"> Meters </a></li>
+        <li><a href="KiloToMiles.html"> Miles </a></li>
+        <li><a href="calculator.html">calculator</a></li>
+        <li><a href="counter.html">counter</a></li>
+        <li><a href="KiloToMeters.html" > Meters </a></li>
+        <li><a href="KiloToMiles.html"> Miles </a></li>
+    </ul>
+ </div>
+ <div class="calculator-container">
+    <div class="calculator">
+ <center><input type="text" id="display" readonly></center>
+ <hr>
+<input type="button" id="btn-num" onClick="appendToDisplay('1')" value="1">
+<input type="button" id="btn-num" onClick="appendToDisplay('2')" value="2">
+<input type="button" id="btn-num" onClick="appendToDisplay('3')" value="3">
+<input type="button" id="btn-operand" onClick="appendToDisplay('+')" value="+">
+<br>
+<input type="button" id="btn-num" onClick="appendToDisplay('4')" value="4">
+<input type="button" id="btn-num" onClick="appendToDisplay('5')" value="5">
+<input type="button" id="btn-num" onClick="appendToDisplay('6')" value="6">
+<input type="button" id="btn-operand" onClick="appendToDisplay('-')" value="-">
+<br>
+<input type="button" id="btn-num" onClick="appendToDisplay('7')" value="7">
+<input type="button" id="btn-num" onClick="appendToDisplay('8')" value="8">
+<input type="button" id="btn-num" onClick="appendToDisplay('9')" value="9">
+<input type="button" id="btn-operand" onClick="appendToDisplay('/')" value="/">
+<br>
+<input type="button" id="btn-num" onClick="appendToDisplay('0')" value="0">
+<input type="button" id="btn-num" onClick="appendToDisplay('(')" value=" (">
+<input type="button" id="btn-num" onClick="appendToDisplay(')')"
+value=") ">
+<input type="button" id="btn-operand" onClick="appendToDisplay('*')" value="*"> 
+<br>
+<input type="button" id="btn-equal" onClick="calculate()" value="=">
+<input type="button" id="btn-operand" onClick="clearDisplay()" value="Clear  ">
+<input type="button" id="btn-operand" onClick="appendToDisplay('.')" value=".">
+    </div>  
+  </div>
+  
+<script>
+ 
+  function appendToDisplay(value){
+document.getElementById('display').value+=value;
+} 
+  function clearDisplay(){
+document.getElementById('display').value='';
+}
+  function calculate(){
+     try{
+    var result =                                     
+eval(document.getElementById('display').value);
+document.getElementById('display').value=result;
+     }catch(error){
+ document.getElementById('display').value="error";
+     }
+} 
+</script>
+ 
+</body>
+</html>
