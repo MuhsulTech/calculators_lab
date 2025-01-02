@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>@Muhsul_bmi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Navigation container-->
+
+<div class="nav-bar">
+    
+    <ul>
+        
+        <li><a href="calculator.html">calculator</a></li>
+        <li><a href="counter.html">counter</a></li>
+        <li><a href="KiloToMeters.html" class="active"> Meters </a></li>
+        <li><a href="KiloToMiles.html"> Miles </a></li> 
+       
+ </div>
+
+<!--  selection containers -->
+    <div class="unit_converter" style="display:block;">
+    <input type="radio" name="Measures" id="Meters">
+    <label for="Meters" id="Meters">Convert Meters to kilometers </label>
+ </div>
+    <div class="unit_converter" style="display:block;">
+    <input type="radio" name="Measures" id="kilometers">
+    <label for="kilometers" id="kilometer">Convert kilometers to Meters</label>
+</div>
+
+    
+ 
+ <!-- Meters to kilometers calculator -->
+    <div class="unit_converter"   style="display:none; padding :30px;"id="cal2">
+        
+    <input type="number" id="inputMeter" placeholder="Enter number in Meters"><br>
+    <p id="resultKm" style="border:4px solid #c68a00;"></p><br>
+    <input type="button" onClick="convertMetersToKilometers()" value="Convert Meters To km" id="meter">      
+ </div>  
+ 
+ <!-- kilometers to Meters calculator -->
+    <div class="unit_converter" style="display:none; padding:30px;" id="cal1">
+        
+    <input type="number" id="inputKm" placeholder="Enter number in km"><br>
+    <p id="resultMeters" style="border:4px solid #c68a00;"></p><br> 
+    <input type="button" onClick="convert_unit_converter()" value="Convert km To Meters" id="meter">
+    
+       
+        
+ </div>
+ </div>
+<script>
+ /* displaying the content unit to be converted */
+const caL1 = document.getElementById('cal1');
+const caL2 = document.getElementById('cal2');
+const selectKm = document.getElementById('kilometers');
+ const selectMeters = document.getElementById('Meters');
+ 
+  
+ /* starting function */
+ 
+ selectKm.addEventListener('click', ()=>{
+    caL1.style.display="block";
+    caL2.style.display="none";
+ });
+ 
+ 
+selectMeters.addEventListener('click', ()=>{
+    caL1.style.display="none";
+    caL2.style.display="block";
+ }); 
+
+function convertMetersToKilometers(){
+   const Meters = document.getElementById('inputMeter'). value;
+   const kilo = Meters / 1000;
+document.getElementById('resultKm').innerHTML= kilo +" KM";
+}
+
+function convert_unit_converter(){
+   const km = document.getElementById('inputKm'). value;
+   const Meter = km * 1000;
+document.getElementById('resultMeters').innerHTML= Meter +" Meters";
+}
+</script>  
+</body>
+</html>
