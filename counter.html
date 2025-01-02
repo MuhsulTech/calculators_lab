@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@Muhsul cal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="nav-bar">
+    <ul>
+        <li><a href="calculator.html">calculator</a></li>
+        <li><a href="counter.html" class="active">counter</a></li>
+        <li><a href="KiloToMeters.html"> Meters </a></li>
+        <li><a href="KiloToMiles.html"> Miles </a></li>
+        
+        <li><a href="calculator.html">calculator</a></li>
+        <li><a href="counter.html">counter</a></li>
+        <li><a href="KiloToMeters.html" > Meters </a></li>
+        <li><a href="KiloToMiles.html"> Miles </a></li>
+    </ul>
+ </div>
+ <div class="counter-container">
+    <div class="counter">
+<center><span id="display" >0</span></center>
+<hr>
+<input type="button" onClick="countUp()" id="countUp" value="Count"><br><br>
+<input type="button" onClick="clearCount()" value="Reset">
+    </div>  
+  </div>
+  
+<script>
+  let count = 0;
+function countUp(){
+  count++;
+document.getElementById('display'). innerHTML = count;
+}
+function clearCount(){
+   count = 0;
+document.getElementById('display').innerHTML = count;
+}
+  
+</script>
+ 
+</body>
+</html>
