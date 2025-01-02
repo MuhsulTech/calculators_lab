@@ -1,0 +1,220 @@
+*{
+ box-sizing:border-box;
+}
+body{
+ background-color:#f2f2f2;
+ padding:0;
+ margin:0;
+}
+/* Navigation bar */
+.nav-bar  ul{
+ overflow:auto;
+ display:flex;
+ width:100%;
+ height:80px; 
+ background-color:#ffffff;
+ box-shadow: 6px 6px 6px #cdced1;6px 6px 6px #fff;
+ margin:0px 0px 0px 0px;
+}
+
+.nav-bar li{
+ list-style-type:none;
+ margin-right:7px;
+ margin-top:10px;
+ padding-top:10px;
+}
+.nav-bar li a{
+ text-decoration:none;
+ color:#832b21;
+ border-radius:5px;
+ border:1px solid #832b21;
+ padding:8px;
+ margin:0px 0px 0px 0px;
+ text-align:center;
+ font-size:10px;
+ font-weight:600;
+}
+.active{
+  background-color:tan;
+}
+/* counter */
+.counter-container{
+ display:flex;
+ flex-direction:row;
+ flex-wrap:wrap;
+ justify-content:center;
+}
+
+.counter{
+  width:300px;
+  height:350px;
+  margin:20px auto; 
+  background-color:#ecf0f3;
+  border-radius:20px;
+  border:5px solid tan;
+  box-shadow: 6px 6px 6px #cdced1, -6px -6px 6px #fff;  
+}
+span{
+  display:block;
+  width:200px;
+  height:60px;
+  margin:20px ;
+  padding:5px;
+  color:#832b21;
+  text-align:center;
+  font-size:30px;
+  font-weight:600;
+  border-radius:20px;
+  background-color:#ecf0f3;
+  box-shadow:inset 6px 6px 6px #cdced1, inset -3px -3px 3px #fff; 
+}
+.counter input[type="button"]{
+  width:70px;
+  height:70px;
+  margin-left:35%;
+  margin-top:5%;
+  border:1px solid #832b21;
+  border-radius:100%;  
+  cursor:pointer;
+  color:#832b21;
+  font-weight:600;
+  background-color:tan;
+  box-shadow: 6px 6px 6px #cdced1, -6px -6px 6px #fff;  
+}
+#countUp{
+  width:100px;
+  height:100px;
+  color:tan;
+  border:1px solid tan;
+  background-color:#832b21;
+  margin-left:30%;
+}
+hr{
+  width:100%;
+  height:3px;
+  background-color:tan;
+}
+
+/* Calculator */
+.calculator-container{
+ display:flex;
+ flex-direction:row;
+ flex-wrap:wrap;
+ justify-content:center;
+}
+.calculator{
+  width:300px;
+  height:480px;
+  margin:10px auto; 
+  background-color:#ecf0f3;
+  border-radius:20px;
+  border:5px solid tan;
+  box-shadow: 6px 6px 6px #cdced1, -6px -6px 6px #fff;  
+}
+.calculator input[type="text"]{
+  width:250px;
+  padding:5px;
+  height:100px;
+  outline:none;
+  border:none;
+  background-color:#ecf0f3;
+  justify-content:center;
+  margin:20px auto;
+  align-items:center;
+  border-radius:20px;
+  font-weight:600;
+  font-size:30px;
+  color:#832b21;
+  text-align:center;
+  box-shadow:inset 6px 6px 6px #cdced1, inset -6px -6px 6px #fff;
+}
+.calculator #btn-num, #btn-equal, #btn-operand{
+  padding:10px 23px;
+  margin:7px;
+  border:1px solid tan;
+  border-radius:10px;  
+  cursor:pointer;
+  color:#ffffff;
+  font-weight:600;
+  background-color:#832b21;
+  box-shadow: 6px 6px 6px #cdced1, -6px -6px 6px #fff;  
+  
+}
+.calculator #btn-operand{
+  padding:13px 22px;
+  color:#832b21; 
+  background-color:tan; 
+}
+#btn-equal{
+  padding:15px 47px;
+  color:#832b21;
+  background-color:tan; 
+}
+hr{
+  width:100%;
+  height:7px;
+  background-color:tan;
+}
+/* Unit Converts */
+
+.unit_converter{
+ display:flex;
+ color:#832b21;
+ font-weight:600;
+ margin:20px auto;
+ flex-wrap:wrap;
+ width:300px; 
+ background-color:#ecf0f3;
+ border-radius:30px;
+ padding:10px;
+ box-shadow:-0px 5px 20px rgba(0,0,0,0.33); 
+}
+.unit_converter [type="radio"], label{
+ accent-color:red;
+ margin-right:25px;
+ font-size:15px; 
+}
+#kilometer, #Meters{
+ color:#d58c12;  
+}
+.unit_converter [type="number"] {
+ width:100%;
+ height:50px;
+ border:none;
+ outline:none;
+ color:#832b21;
+ text-align:center;
+ font-weight:600;
+ font-size:15px; 
+ border-radius:30px;
+ background-color:#ecf0f3;
+ margin:10px auto;
+ align-items:center;
+ box-shadow:inset 6px 6px 6px #cdced1,inset -6px -6px 6px #fff;
+}
+unit_converter, p{
+ width:100%;
+ height:40px;
+ text-align:center;
+ margin:10px auto;
+ border:4px solid #832b21;
+ padding:10px;
+ border-radius:13px;
+ font-weight:600;
+ color:#832b21;
+ box-shadow: 6px 6px 6px #cdced1, -6px -6px 6px #fff;
+}
+.unit_converter input[type="button"]{
+ width:100%;
+ height:40px;
+ align-items:center;
+ color:#ffffff;
+ font-weight:600;
+ border:none;
+ border-radius:40px;
+ background-color:#832b21;
+ box-shadow: 6px 6px 6px #cdced1, -6px -6px 6px #fff;
+}
+#meter{
+ background-color:#c68a00;
+}
